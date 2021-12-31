@@ -1,8 +1,21 @@
+@keyframes pisca {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
 body {
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .urna {
@@ -16,6 +29,8 @@ body {
   height: 320px;
   background: linear-gradient(to right, #e8e8e8, #c1c1c1);
   border: 2px solid #555;
+  display: flex;
+  flex-direction: column;
 }
 
 .teclado {
@@ -59,4 +74,87 @@ body {
   font-size: 15px;
   width: 80px;
   height: 50px;
+}
+
+.parte-cima {
+  flex: 1;
+  display: flex;
+}
+
+.parte-baixo {
+  height: 50px;
+  font-size: 15px;
+  border-top: 2px solid #000;
+  padding-left: 10px;
+}
+
+.dentro-esquerda {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.dentro-direita {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+}
+
+.seu-voto {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.cargo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numero {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.outras-informacoes {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+}
+
+.quadrado {
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pisca {
+  animation-name: pisca;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.foto {
+  border: 1px solid #000;
+  background-color: #fff;
+  text-align: center;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
 }
